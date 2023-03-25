@@ -1,0 +1,222 @@
+<div class="page">
+
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-select interface="popover" placeholder="Selecione o CRM" [value]="crms[0].value">
+          <ion-select-option *ngFor="let crm of crms" [value]="crm.value">{{crm.title}}</ion-select-option>
+        </ion-select>
+      </ion-buttons>
+      <ion-title>Início</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Início</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <div id="container">
+      
+      <ion-grid>
+        
+        <ion-row class="hello-container">
+          <strong class="capitalize">Olá Dr(a) Daniel Aguiar</strong>
+        </ion-row>
+  
+        <ion-row>
+          <section id="signing-section">
+  
+            <div class="section-title">
+              <span>Seção de Assinaturas </span>
+              <span class="signing-info-icon">
+                <ion-icon slot="icon-only" name="information-circle" (click)="showSigningInfo()"></ion-icon>
+                <div class="signing-info-box {{signingInfoIsVisible}}">
+                  <ion-grid>
+                    <ion-row>
+                      <p class="signing-message"><span>Atenção: </span>Caso seu certificado digital seja A3 (smartcard/token), deve-se instalar o 'Assinador-Certillion'. Caso seu certificado digital seja em NUVEM não há necessidade desta instalação.</p>
+                    </ion-row>
+                    <ion-row>
+                      <div class="signing-link">
+                        <span>Acesse o link para realizar download: <a href="https://download.certillion.com">https://download.certillion.com</a>.</span>
+                      </div>
+                    </ion-row>
+                    <ion-row>
+                      <div class="signing-link">
+                        <span>Acesse o link para realizar download: <a href="https://download.certillion.com">https://download.certillion.com</a>.</span>
+                      </div>
+                    </ion-row>
+                  </ion-grid>
+                </div>
+              </span>
+            </div>
+  
+            <ion-col class="content">
+              <ion-row>
+                <label class="signing-label">Você pode habilitar sua assinatura agora, para utilizar em todo sistema.</label>
+              </ion-row>
+              <ion-row class="signing-toggle">
+                <ion-toggle [checked]="false"></ion-toggle>
+                <label>Assinar Digital</label>
+              </ion-row>
+            </ion-col>
+  
+          </section>
+        </ion-row>
+  
+        <ion-row>
+          <section id="notifications-section">
+            <embed src="https://prescricaoeletronica.cfm.org.br/notificacoes/">
+          </section>
+        </ion-row>
+  
+        <ion-row>
+          <section id="quick-access">
+            <strong>Acesso rápido</strong>
+            <ion-row>
+              <ion-col>
+                <ion-card id="open-modal">
+                  <img alt="Novo Documento Médico" src="https://prescricao-hom.cfm.org.br/content/2a5b0b2b42e17a5ac4d25dce3d400772.png" />
+                  <ion-card-header>
+                    <ion-card-title>Novo Documento Médico</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    Criar novo atestado, receituário, ou solicitação de exames
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col>
+                <ion-card routerDirection="root" [routerLink]="['/pages/pacientes']">
+                  <img alt="Pacientes" src="https://prescricao-hom.cfm.org.br/content/8d11d40512ecccaae6575404e521283f.png" />
+                  <ion-card-header>
+                    <ion-card-title>Pacientes</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    Cadastre os dados básicos dos seus pacientes
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col>
+                <ion-card routerDirection="root" [routerLink]="['/pages/meus-documentos-medicos']">
+                  <img alt="Meus Documentos Médicos" src="https://prescricao-hom.cfm.org.br/content/2afbdbe51dc7b950530e2db2f7b8e87f.png" />
+                  <ion-card-header>
+                    <ion-card-title>Meus Documentos Médicos</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    Pesquise por documentos médicos assinados e enviados
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <ion-col>
+                <ion-card routerDirection="root" [routerLink]="['/pages/modelos-de-documentos-medicos']">
+                  <img alt="Modelos de Documentos Médicos" src="https://prescricao-hom.cfm.org.br/content/cbb96fd0594cfaa78e0d6bfc3920600b.png" />
+                  <ion-card-header>
+                    <ion-card-title>Modelos de Documentos Médicos</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    Crie modelos personalizados de documentos médicos
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </section>
+        </ion-row>
+  
+      </ion-grid>
+  
+      <footer>
+        <p>SISTEMA PRESCRIÇÃO ELETRÔNICA © TODOS OS DIREITOS RESERVADOS. 1.0</p>
+        <span>v1.1.30-32dc2ef</span>
+      </footer>
+  
+      <ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss" [presentingElement]="presentingElement">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Documento Médico</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="modal.dismiss();enableDocumentCreation = true">
+                  <!-- <ion-icon slot="icon-only" name="close"></ion-icon> -->
+                  Cancelar
+                </ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content id="modal-content" class="ion-padding-horizontal ion-padding-vertical">
+            <strong>Novo Documento Médico</strong>
+            <!-- <ion-checkbox id="terms" (ionChange)="onTermsChanged($event)" [checked]="canDismiss"></ion-checkbox> -->
+            <ion-grid>
+              <ion-col>
+                <ion-row>
+                  <div class="input">
+                    <ion-label>Tipo de Documento Médico<span>*</span></ion-label>
+                    <ion-select interface="action-sheet" placeholder="Selecionar" (ionChange)="onDocumentTypeChanged($event)">
+                      <ion-select-option *ngFor="let documentType of documentsTypes" [value]="documentType.value">{{documentType.title}}</ion-select-option>
+                    </ion-select>
+                  </div>
+                </ion-row>
+                <ion-row>
+                  <div class="input">
+                    <ion-label>Locais de Atendimento<span>*</span></ion-label>
+                    <ion-select interface="action-sheet" placeholder="Selecionar" [value]="newDocument.serviceLocation" (ionChange)="onServiceLocationChanged($event)">
+                      <ion-select-option *ngFor="let serviceLocation of servicesLocations" [value]="serviceLocation.value">{{serviceLocation.title}}</ion-select-option>
+                    </ion-select>
+                  </div>
+                </ion-row>
+                <ion-row>
+                  <div class="input">
+                    <ion-label>Aplicar Modelo</ion-label>
+                    <ion-select interface="action-sheet" placeholder="Selecionar" (ionChange)="onDocumentModelChanged($event)">
+                      <ion-select-option *ngFor="let documentModel of documentModels" [value]="documentModel.value">{{documentModel.title}}</ion-select-option>
+                    </ion-select>
+                  </div>
+                </ion-row>
+                <ion-row>
+                  <div class="checkbox ion-margin-top">
+                    <ion-toggle color="primary" [checked]="cpfOnMedicalDocument" (ionChange)="onCpfOnMedicalDocumentChanged($event)"></ion-toggle>
+                    <ion-label>CPF do médico no documento médico?</ion-label>
+                  </div>
+                </ion-row>
+                <ion-row>
+                  <div class="checkbox">
+                    <ion-toggle color="primary" [checked]="patientAddressOnMedicalDocument" (ionChange)="onPatientAddressOnMedicalDocumentChanged($event)"></ion-toggle>
+                    <ion-label>Endereço do paciente no documento médico?</ion-label>
+                  </div>
+                </ion-row>
+                <ion-row>
+                  <span class="alert-message ion-margin-top">* Campos obrigatórios</span>
+                </ion-row>
+              </ion-col>
+            </ion-grid>
+
+            <ion-grid class="ion-margin-top">
+              <ion-row class="ion-justify-content-center">
+                <!-- <ion-col>
+                  <ion-button (click)="modal.dismiss();enableDocumentCreation = true" expand="block" fill="outline" shape="round">
+                    Cancelar
+                  </ion-button>
+                </ion-col>
+                <ion-col size="1"></ion-col> -->
+                <ion-col>
+                  <ion-button (click)="modal.dismiss();newMedicalDocument()" expand="block" shape="round" [disabled]="enableDocumentCreation">
+                    Confirmar
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+
+    </div>
+  </ion-content>
+</div>

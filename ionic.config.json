@@ -1,5 +1,7 @@
 {
   "name": "prescricao-eletronica",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

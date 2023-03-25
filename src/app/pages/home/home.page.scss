@@ -1,0 +1,241 @@
+ion-header ion-toolbar ion-buttons ion-select {
+  border: 1px solid #e0dfdf;
+  border-radius: 6px;
+}
+
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+#container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 20px;
+  & > ion-grid {
+    padding-inline: 10px;
+  }
+}
+
+#container .hello-container {
+  width: 100%;
+  text-align: start;
+  margin-block: 10px 20px;
+  strong {
+    font-size: 20px;
+    line-height: 26px;
+    color: #454747;
+  }
+}
+
+#container #signing-section {
+  position: relative;
+  padding-inline: 20px;
+  margin-top: 10px;
+  border: 1px solid #e0dfdf;
+  border-radius: 6px;
+}
+
+#container #signing-section .section-title {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  transform: translateY(-12px);
+  display: flex;
+  align-items: center;
+  padding-inline: 4px;
+  background-color: #ffffff;
+  z-index: 100;
+  & > span {
+    font-size: 16px;
+    color: #818181;
+  }
+  .signing-info-icon ion-icon {
+    margin-left: 4px;
+    font-size: 24px;
+    color: var(--ion-color-primary);
+  }
+}
+
+#container #signing-section .signing-info-box {
+  position: absolute;
+  top: 20px;
+  left: 6px;
+  width: 88vw;
+  padding-inline: 14px;
+  padding-block: 14px;
+  background-color: #e0dfdf;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+  transition-delay: 0.6s;
+  &.is-visible {
+    top: 30px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  p.signing-message {
+    margin-block: 0 6px;
+    font-size: 14px;
+    color: #454747;
+    span {
+      font-size: 16px;
+      color: #ff1f1f;
+    }
+  }
+  .signing-link {
+    margin-top: 6px;
+    span {
+      font-size: 14px;
+      color: #454747;
+      a {
+        font-style: italic;
+        font-size: 14px;
+        color: #3e8acc;
+      }
+    }
+  }
+}
+
+#container #signing-section .section-title .signing-info-icon:hover > .signing-info-box {
+  top: 30px;
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+#container .signing-label {
+  font-size: 16px;
+  color: var(--ion-color-primary);
+}
+
+#container .signing-toggle {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  &.ios {
+    gap: 12px;
+  }
+  label {
+    font-size: 16px;
+    color: #8c8c8c;
+  }
+}
+
+#container #notifications-section {
+  width: 100%;
+  height: 352px;
+  margin-top: 10px;
+  border: 1px solid #e0dfdf;
+  border-radius: 6px;
+  overflow: hidden;
+  embed {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#container #quick-access {
+  margin-top: 30px;
+  strong {
+    font-size: 16px;
+    color: var(--ion-color-primary);
+  }
+  & > ion-row {
+    margin-top: 10px;
+  }
+  ion-card {
+    height: 100%;
+    padding-top: 8px;
+    padding-inline: 8px;
+    margin: 2px;
+    cursor: pointer;
+    img {
+      width: 100%;
+      // height: 100px;
+      border: 1px solid #e0dfdf;
+      border-radius: 4px;
+    }
+    ion-card-title {
+      color: #353A3E;
+      &.ios {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+#container footer {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding-inline: 10px;
+  margin-top: 30px;
+  background-color: #353A3E;
+  p {
+    font-size: 12px;
+    color: #e0dfdf;
+  }
+  span {
+    font-size: 12px;
+    color: #e0dfdf;
+  }
+}
+
+ion-modal #modal-content {
+  strong {
+    font-size: 1.3rem;
+    color: var(--ion-color-primary);
+  }
+  ion-col {
+    padding-inline: 0;
+    ion-row {
+      margin-top: 16px;
+      .input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        ion-label {
+          margin-left: 16px;
+          color: #454747;
+          span {
+            color: #ff1f1f;
+          }
+        }
+        ion-select, ion-input {
+          width: 100%;
+          height: 40px;
+          padding-inline: 20px !important;
+          font-size: 1rem;
+          border: 1px solid #e0dfdf;
+          border-radius: 50px;
+        }
+      }
+      .checkbox {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 10px;
+        ion-label {
+          font-size: 0.9rem;
+          font-weight: bold;
+          color: #818181;
+        }
+      }
+      .alert-message {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ff1f1f;
+      }
+    }
+  }
+}
+

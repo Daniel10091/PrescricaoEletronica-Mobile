@@ -5,14 +5,18 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Início', url: '/pages/inicio', icon: 'home' },
+    { title: 'Pacientes', url: '/pages/pacientes', icon: 'person' },
+    { title: 'Locais de Atendimento', url: '/pages/locais-de-atendimento', icon: 'location' },
+    { title: 'Meus documentos médicos', url: '/pages/meus-documentos-medicos', icon: 'documents' },
+    { title: 'Modelos de documentos médicos', url: '/pages/modelos-de-documentos-medicos', icon: 'document-text' },
+    { title: 'Sair', url: '/pages/sair', icon: 'exit' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
+  // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
   constructor() {}
+
 }
