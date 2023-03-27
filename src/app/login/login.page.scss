@@ -87,6 +87,12 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      ion-radio.ios {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #969696;
+        border-radius: 6px;
+      }
     }
   }
 }
@@ -154,7 +160,7 @@
         ion-input {
           height: 40px;
           margin-block: 14px 8px;
-          padding-inline: 10px !important;
+          padding-inline: 20px !important;
           color: #454747;
           border: 1px solid #8c8c8c;
           border-radius: 50px;
@@ -172,6 +178,10 @@
           color: #ff1f1f;
           pointer-events: none;
           opacity: 0;
+          transition: all 0.2s ease;
+        }
+        &.is-null span.input-alert {
+          opacity: 1;
         }
       }
       .form-justify-center {

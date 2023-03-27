@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-new-medical-document',
@@ -8,12 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class NewMedicalDocumentPage implements OnInit {
 
-  public page!: string;
+  constructor() { }
 
-  constructor(private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
-    this.page = this.activatedRoute.snapshot.paramMap.get('id') as string;
-  }
+  ngOnInit(): any { }
 
 }

@@ -35,7 +35,7 @@
                     <ion-row>
                       <ion-col>
                         <div class="login-option">
-                          <ion-radio value="custom-checked"></ion-radio>
+                          <ion-radio value="custom-checked" id="medic"></ion-radio>
                           <ion-label>Sou médico</ion-label>
                         </div>
                       </ion-col>
@@ -90,23 +90,30 @@
                       <form action="" id="login-form" autocomplete="off">
                         <ion-grid>
                           <ion-row class="input-grid">
-                            <div class="input">
+                            <div class="input {{invalidLogin}}">
                               <ion-label position="stacked">Login<span>*</span></ion-label>
-                              <ion-input type="text" placeholder="Digite seu CPF ou CRM"></ion-input>
+                              <ion-input 
+                                type="text" 
+                                placeholder="Digite seu CPF ou CRM" 
+                                [value]="inputModel"
+                                (ionInput)="onInput($event);onLoginInput($event);onValidateLogin()" 
+                                #ionInputEl 
+                                autocomplete="off"
+                              ></ion-input>
                               <span class="input-alert">Campo obrigatório.</span>
                             </div>
-                            <div class="input">
+                            <div class="input {{invalidUf}}">
                               <ion-label position="stacked">UF<span>*</span></ion-label>
-                              <ion-select placeholder="Selecionar">
+                              <ion-select placeholder="Selecionar" (ionChange)="onUfChanged($event);onValidateLogin()">
                                 <ion-select-option *ngFor="let uf of ufs" [value]="[uf.value]">{{uf.title}}</ion-select-option>
                               </ion-select>
                               <span class="input-alert">Campo obrigatório.</span>
                             </div>
                           </ion-row>
-                          <ion-row>
-                            <div class="input">
+                          <ion-row class="ion-margin-top">
+                            <div class="input {{invalidPassword}}">
                               <ion-label position="stacked">Senha<span>*</span></ion-label>
-                              <ion-input type="password" placeholder="Digite su senha"></ion-input>
+                              <ion-input type="password" placeholder="Digite su senha" (ionInput)="onPasswordInput($event);onValidateLogin()" autocomplete="off"></ion-input>
                               <span class="input-alert">Campo obrigatório.</span>
                             </div>
                           </ion-row>
@@ -120,7 +127,7 @@
                             <a href="">Esqueceu su senha?</a>
                           </ion-row>
                           <ion-row class="form-justify-center">
-                            <ion-button (click)="login()" expand="block" shape="round">
+                            <ion-button (click)="login()" expand="block" shape="round" [disabled]="disableLoginButton">
                               Entar
                             </ion-button>
                           </ion-row>

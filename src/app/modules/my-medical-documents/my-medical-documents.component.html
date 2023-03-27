@@ -1,0 +1,77 @@
+<ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss" [presentingElement]="presentingElement">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Documento Médico</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="modal.dismiss();enableDocumentCreation = true">
+            <!-- <ion-icon slot="icon-only" name="close"></ion-icon> -->
+            Cancelar
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content id="modal-content" class="ion-padding-horizontal ion-padding-vertical">
+      <strong>Novo Documento Médico</strong>
+      <ion-grid>
+        <ion-col>
+          <ion-row>
+            <div class="input">
+              <ion-label>Tipo de Documento Médico<span>*</span></ion-label>
+              <ion-select interface="action-sheet" placeholder="Selecionar" (ionChange)="onDocumentTypeChanged($event)">
+                <ion-select-option *ngFor="let documentType of documentsTypes" [value]="documentType.value">{{documentType.title}}</ion-select-option>
+              </ion-select>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="input">
+              <ion-label>Locais de Atendimento<span>*</span></ion-label>
+              <ion-select interface="action-sheet" placeholder="Selecionar" [value]="newDocument.serviceLocation" (ionChange)="onServiceLocationChanged($event)">
+                <ion-select-option *ngFor="let serviceLocation of servicesLocations" [value]="serviceLocation.value">{{serviceLocation.title}}</ion-select-option>
+              </ion-select>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="input">
+              <ion-label>Aplicar Modelo</ion-label>
+              <ion-select interface="action-sheet" placeholder="Selecionar" (ionChange)="onDocumentModelChanged($event)">
+                <ion-select-option *ngFor="let documentModel of documentModels" [value]="documentModel.value">{{documentModel.title}}</ion-select-option>
+              </ion-select>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="checkbox ion-margin-top">
+              <ion-toggle color="primary" [checked]="cpfOnMedicalDocument" (ionChange)="onCpfOnMedicalDocumentChanged($event)"></ion-toggle>
+              <ion-label>CPF do médico no documento médico?</ion-label>
+            </div>
+          </ion-row>
+          <ion-row>
+            <div class="checkbox">
+              <ion-toggle color="primary" [checked]="patientAddressOnMedicalDocument" (ionChange)="onPatientAddressOnMedicalDocumentChanged($event)"></ion-toggle>
+              <ion-label>Endereço do paciente no documento médico?</ion-label>
+            </div>
+          </ion-row>
+          <ion-row>
+            <span class="alert-message ion-margin-top">* Campos obrigatórios</span>
+          </ion-row>
+        </ion-col>
+      </ion-grid>
+
+      <ion-grid class="ion-margin-top">
+        <ion-row class="ion-justify-content-center">
+          <!-- <ion-col>
+            <ion-button (click)="modal.dismiss();enableDocumentCreation = true" expand="block" fill="outline" shape="round">
+              Cancelar
+            </ion-button>
+          </ion-col>
+          <ion-col size="1"></ion-col> -->
+          <ion-col>
+            <ion-button (click)="modal.dismiss();newMedicalDocument()" expand="block" shape="round" [disabled]="enableDocumentCreation">
+              Confirmar
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  </ng-template>
+</ion-modal>
