@@ -1,10 +1,10 @@
 <ion-content>
-  <div id="container">
+  <div id="container" class="ion-justify-content-center">
     <ion-grid>
 
-      <ion-row id="presentatio-section">
+      <ion-row id="presentatio-section" class="ion-margin-top ion-align-items-center">
         <ion-col>
-          <div class="presentatio-content">
+          <ion-row class="presentatio-content ion-justify-content-center ion-align-items-center">
             <strong>PRESCRIÇÃO ELETRÔNICA</strong>
             <p class="caption">Com a plataforma do CFM, ficou mais fácil o médico prescrever.</p>
             <p>Uma solução simples, segura e 100% gratuita para conectar médicos, pacientes e farmaceutic.</p>
@@ -12,7 +12,7 @@
               <ion-icon slot="icon-only" name="logo-youtube"></ion-icon>
               <span>Vídeos Tutoriais da Prescreção Eletrônica</span>
             </a>
-          </div>
+          </ion-row>
         </ion-col>
         <ion-col>
           <img alt="Prescrição Eletrônica" src="https://prescricao-hom.cfm.org.br/content/1b9324df41232c28dcabbf0ed557761f.png">
@@ -22,7 +22,7 @@
       <ion-row id="autentication-section">
         <ion-col>
           <div class="autentication-content">
-            <ion-row>
+            <ion-row class="ion-justify-content-center">
               <strong>Autenticação</strong>
             </ion-row>
             <ion-row>
@@ -30,17 +30,17 @@
                 <p>Bem-vindos ao sistema Prescrição Eletrônica.</p>
                 <p>Utilize as caixas abaixo para acessar o sistema.</p>
                 <span>Você pode utilizar os mesmos dados de acesso do CRM virtual.</span>
-                <div class="login-options">
+                <div class="login-options ion-margin-top">
                   <ion-radio-group value="custom-checked">
                     <ion-row>
-                      <ion-col>
-                        <div class="login-option">
+                      <ion-col class="ion-justify-content-center">
+                        <div class="login-option ion-align-items-center">
                           <ion-radio value="custom-checked" id="medic"></ion-radio>
                           <ion-label>Sou médico</ion-label>
                         </div>
                       </ion-col>
                       <ion-col>
-                        <div class="login-option">
+                        <div class="login-option ion-align-items-center">
                           <ion-radio value="custom"></ion-radio>
                           <ion-label>Sou farmacêutico</ion-label>
                         </div>
@@ -117,24 +117,24 @@
                               <span class="input-alert">Campo obrigatório.</span>
                             </div>
                           </ion-row>
-                          <ion-row class="form-justify-center">
+                          <ion-row class="ion-justify-content-center">
                             <p class="form-info">Os campos marcados com asterisco (*) são obrigatórios.</p>
                           </ion-row>
-                          <ion-row class="form-justify-center">
+                          <ion-row class="ion-justify-content-center">
                             <a href="">Cadastre-se</a>
                           </ion-row>
-                          <ion-row class="form-justify-center">
+                          <ion-row class="ion-justify-content-center">
                             <a href="">Esqueceu su senha?</a>
                           </ion-row>
-                          <ion-row class="form-justify-center">
+                          <ion-row class="ion-justify-content-center">
                             <ion-button (click)="login()" expand="block" shape="round" [disabled]="disableLoginButton">
                               Entar
                             </ion-button>
                           </ion-row>
-                          <ion-row class="form-justify-center">
+                          <ion-row class="ion-justify-content-center ion-margin-top">
                             <span>Versão: v1.1.30 - 12/03/2023.</span>
                           </ion-row>
-                          <ion-row class="form-justify-center form-align-center">
+                          <ion-row class="ion-justify-content-center ion-align-items-center">
                             <ion-col>
                               <img src="https://prescricao-hom.cfm.org.br/content/daebd89f038168ac100ee4295306972e.png" alt="">
                             </ion-col>

@@ -1,0 +1,48 @@
+ion-modal #modal-content strong {
+  font-size: 1.3rem;
+  color: var(--ion-color-primary);
+}
+ion-modal #modal-content ion-col {
+  padding-inline: 0;
+}
+ion-modal #modal-content ion-col ion-row {
+  margin-top: 16px;
+}
+ion-modal #modal-content ion-col ion-row .input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+ion-modal #modal-content ion-col ion-row .input ion-label {
+  margin-left: 16px;
+  color: #454747;
+}
+ion-modal #modal-content ion-col ion-row .input ion-label span {
+  color: #ff1f1f;
+}
+ion-modal #modal-content ion-col ion-row .input ion-select, ion-modal #modal-content ion-col ion-row .input ion-input {
+  width: 100%;
+  height: 40px;
+  padding-inline: 20px !important;
+  font-size: 1rem;
+  border: 1px solid #e0dfdf;
+  border-radius: 50px;
+}
+ion-modal #modal-content ion-col ion-row .checkbox {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+}
+ion-modal #modal-content ion-col ion-row .checkbox ion-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #818181;
+}
+ion-modal #modal-content ion-col ion-row .alert-message {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff1f1f;
+}/*# sourceMappingURL=my-medical-documents.component.css.map */

@@ -1,0 +1,214 @@
+#container {
+  display: flex;
+  justify-content: center;
+  background-image: url("https://prescricao-hom.cfm.org.br/content/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  background-position: right;
+}
+
+#container #presentatio-section {
+  margin-top: 20px;
+}
+#container #presentatio-section .presentatio-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#container #presentatio-section .presentatio-content strong {
+  font-family: "Baloo 2", cursive;
+  font-size: 1.6rem;
+  color: var(--ion-color-primary);
+}
+#container #presentatio-section .presentatio-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ion-color-primary);
+}
+#container #presentatio-section .presentatio-content p.caption {
+  margin-block: 6px;
+  text-transform: uppercase;
+  color: #454747;
+}
+#container #presentatio-section .presentatio-content a {
+  margin-top: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #ff1f1f;
+}
+#container #presentatio-section .presentatio-content a ion-icon {
+  margin-right: 6px;
+  font-size: 1rem;
+  transform: translateY(2px);
+}
+
+#container #autentication-section .autentication-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+#container #autentication-section .autentication-content > ion-row {
+  justify-content: center;
+  width: 100%;
+}
+#container #autentication-section .autentication-content strong {
+  font-family: "Baloo 2", cursive;
+  font-size: 1.6rem;
+  color: var(--ion-color-primary);
+}
+
+#container #autentication-section .autentication-content .autentication-info {
+  margin-top: 10px;
+  text-align: center;
+}
+#container #autentication-section .autentication-content .autentication-info p {
+  margin-block: 4px;
+  font-size: 0.9rem;
+  color: #454747;
+}
+#container #autentication-section .autentication-content .autentication-info span {
+  font-size: 0.9rem;
+  color: var(--ion-color-primary);
+}
+#container #autentication-section .autentication-content .autentication-info .login-options {
+  margin-top: 14px;
+}
+#container #autentication-section .autentication-content .autentication-info .login-options ion-col {
+  display: flex;
+  justify-content: center;
+}
+#container #autentication-section .autentication-content .autentication-info .login-options .login-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#container #autentication-section .autentication-content .autentication-info .login-options .login-option ion-radio.ios {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #969696;
+  border-radius: 6px;
+}
+
+#container .autentication-content #login-container {
+  width: 100%;
+}
+#container .autentication-content #login-container .login-form {
+  width: 100%;
+}
+#container .autentication-content #login-container .login-form .title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 50px;
+}
+#container .autentication-content #login-container .login-form .title span {
+  border-top: 1px solid #d1d1d1;
+}
+#container .autentication-content #login-container .login-form .title ion-label {
+  font-size: 16px;
+  color: #8c8c8c;
+}
+
+#container .autentication-content #login-container .login-form .login-with-certificate > ion-row {
+  margin-top: 10px;
+  justify-content: center;
+}
+#container .autentication-content #login-container .login-form .login-with-certificate > ion-row ion-button ion-icon {
+  margin-right: 10px;
+}
+#container .autentication-content #login-container .login-form .login-with-certificate > ion-row a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+#container .autentication-content #login-container .login-form .default-login > ion-row {
+  justify-content: center;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form {
+  width: 100%;
+  margin-top: 10px;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .input-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .input ion-label {
+  margin-left: 14px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #5f5f5f;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .input ion-label span {
+  color: #ff1f1f;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .input ion-input {
+  height: 40px;
+  margin-block: 14px 8px;
+  padding-inline: 20px !important;
+  color: #454747;
+  border: 1px solid #8c8c8c;
+  border-radius: 50px;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .input ion-select {
+  width: 28vw;
+  height: 40px;
+  margin-block: 14px 8px;
+  padding-right: 6px;
+  border: 1px solid #8c8c8c;
+  border-radius: 50px;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .input span.input-alert {
+  font-size: 0.9rem;
+  color: #ff1f1f;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .input.is-null span.input-alert {
+  opacity: 1;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .form-justify-center {
+  justify-content: center;
+  margin-bottom: 8px;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .form-justify-center p.form-info {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--ion-color-primary);
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .form-justify-center a {
+  margin-block: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--ion-color-primary);
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .form-justify-center ion-button {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .form-justify-center span {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #5f5f5f;
+}
+#container .autentication-content #login-container .login-form .default-login > ion-row #login-form .form-justify-center.form-align-center {
+  align-items: center;
+}/*# sourceMappingURL=login.page.css.map */

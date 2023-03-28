@@ -1,0 +1,148 @@
+.page-title {
+  font-size: 1.8rem;
+  color: #454747;
+}
+
+#container > span {
+  font-size: 0.9rem;
+  color: #454747;
+}
+
+#container .form-container {
+  padding: 4px;
+  border: 1px solid #e0dfdf;
+  border-radius: 10px;
+}
+
+#container .form-container .form-header {
+  display: flex;
+  align-items: center;
+  padding-block: 12px;
+  border-bottom: 1px solid #e0dfdf;
+}
+#container .form-container .form-header .form-title {
+  font-size: 1.2rem;
+  color: var(--ion-color-primary);
+}
+
+#container .form-container #form .form-row-1 ion-button {
+  font-size: 0.9rem;
+}
+#container .form-container #form .form-row-1 ion-button.md {
+  text-transform: none;
+}
+#container .form-container #form .form-row-1 ion-select {
+  border: 1px solid #e0dfdf;
+  border-radius: 6px;
+  color: #454747;
+}
+#container .form-container #form .form-row-2 b {
+  font-size: 1rem;
+  color: var(--ion-color-primary);
+}
+#container .form-container #form .form-row-2 .input-area {
+  width: 100%;
+  margin-top: 10px;
+}
+#container .form-container #form .form-row-2 .input-area ion-label {
+  font-size: 0.9rem;
+  color: #818181;
+}
+#container .form-container #form .form-row-2 .input-area ion-label span {
+  color: #ff1f1f;
+}
+#container .form-container #form .form-row-2 .input-area ion-input {
+  margin-top: 8px;
+  padding-inline: 16px !important;
+  color: #454747;
+  border: 1px solid #e0dfdf;
+  border-radius: 6px;
+}
+#container .form-container #form .form-row-2 .ripple-parent {
+  position: relative;
+  width: 100%;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 0.95rem;
+  color: var(--ion-color-primary);
+  border: 1px solid #e0dfdf;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#container .form-container #form .form-row-2 .ripple-parent .custom-ripple {
+  color: #078860;
+}
+#container .form-container #form .form-row-3 {
+  padding-inline: 7px;
+}
+#container .form-container #form .form-row-3 ion-label {
+  font-size: 1rem;
+  color: #454747;
+}
+#container .form-container #form .form-row-3 ion-label span {
+  color: #ff1f1f;
+}
+#container .form-container #form .form-row-3 ion-item {
+  width: 100%;
+  margin-top: 8px;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --border-color: transparent;
+}
+#container .form-container #form .form-row-3 ion-item ion-textarea {
+  padding-inline: 16px;
+  color: #454747;
+  border: 1px solid #e0dfdf;
+  border-radius: 6px;
+}
+#container .form-container #form .form-row-4 b {
+  font-size: 1rem;
+  color: var(--ion-color-primary);
+}
+#container .form-container #form .form-row-4 .select-area {
+  width: 100%;
+  margin-top: 10px;
+}
+#container .form-container #form .form-row-4 .select-area ion-label {
+  font-size: 1rem;
+  color: #818181;
+}
+#container .form-container #form .form-row-4 .select-area ion-label span {
+  color: #ff1f1f;
+}
+#container .form-container #form .form-row-4 .select-area ion-select {
+  margin-top: 8px;
+  color: #454747;
+  border: 1px solid #e0dfdf;
+  border-radius: 6px;
+}
+#container .form-container #form .form-row-4 .ripple-parent {
+  position: relative;
+  width: 100%;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 0.95rem;
+  color: var(--ion-color-primary);
+  border: 1px solid #e0dfdf;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#container .form-container #form .form-row-4 .ripple-parent .custom-ripple {
+  color: #078860;
+}/*# sourceMappingURL=medical-certificate.page.css.map */
