@@ -21,84 +21,115 @@
     
     <span>Preencha as informações do atestado médico.</span>
     
-    <div class="form-container ion-margin-vertical">
-      <div class="form-header ion-padding-horizontal">
-        <strong class="form-title">Atestado Médico</strong>
-      </div>
+    <div class="form-container">
       
       <form action="" id="form" autocomplete="off">
         
-        <ion-grid>
+        <div class="form-content ion-margin-vertical">
+          <ion-grid>
+            <div class="form-header ion-padding-horizontal">
+              <strong class="form-title">Atestado Médico</strong>
+            </div>
+  
+            <ion-row class="form-document-options ion-align-items-center">
+              <ion-col size="6">
+                <ion-button (click)="null" expand="block" shape="round" [disabled]="true">
+                  Salvar como Modelo
+                </ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-select interface="action-sheet" placeholder="Selecionar Modelo" [value]="documentModels[0].value">
+                  <ion-select-option *ngFor="let model of documentModels" [value]="model.value">{{model.title}}</ion-select-option>
+                </ion-select>
+              </ion-col>
+            </ion-row>
+  
+            <ion-row class="form-section">
+              <ion-row class="ion-margin-top">
+                <ion-col size="12">
+                  <b class="form-section-title">Dados do paciente</b>
+                  <ion-row>
+                    <div class="field-area">
+                      <ion-label>CPF ou Nome Completo do Paciente<span>*</span></ion-label>
+                      <ion-input type="text" placeholder="Informe CPF ou Nome do paciente" (ionInput)="null" autocomplete="off"></ion-input>
+                    </div>
+                  </ion-row>
+                  <ion-row class="ion-justify-content-start">
+                    <div class="ion-activatable ripple-parent ion-justify-content-center ion-align-items-center">
+                      <ion-icon slot="start" name="add"></ion-icon>
+                      Novo Paciente
+                      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+                    </div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              
+              <ion-row class="ion-margin-top">
+                <ion-col>
+                  <div class="field-area document-description">
+                    <ion-label>Descrição do Atestado:<span>*</span></ion-label>
+                    <ion-item counter="true">
+                      <ion-textarea [autoGrow]="true" maxlength="4000" autocomplete="off"></ion-textarea>
+                    </ion-item>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-row>
+            
+            <ion-row class="form-section">
+              <ion-row class="ion-margin-top">
+                <ion-col size="12">
+                  <b class="form-section-title">Local de Atendimento</b>
+                  <ion-row>
+                    <div class="field-area">
+                      <ion-label>Nome do Local de Atendimento<span>*</span></ion-label>
+                      <ion-select interface="action-sheet" placeholder="Selecionar Modelo" [value]="documentModels[0].value">
+                        <ion-select-option *ngFor="let model of documentModels" [value]="model.value">{{model.title}}</ion-select-option>
+                      </ion-select>
+                    </div>
+                  </ion-row>
+                  <ion-row class="ion-justify-content-start">
+                    <div class="ion-activatable ripple-parent ion-justify-content-center ion-align-items-center">
+                      <ion-icon slot="start" name="add"></ion-icon>
+                      Novo Local de Atendimento
+                      <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
+                    </div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-row>
+  
+          </ion-grid>
+        </div>
+        
+        <span class="form-message">* Campos obrigatórios</span>
 
-          <ion-row class="form-row-1 ion-align-items-center">
-            <ion-col size="6">
-              <ion-button (click)="null" expand="block" shape="round" [disabled]="true">
-                Salvar como Modelo
-              </ion-button>
-            </ion-col>
-            <ion-col size="6">
-              <ion-select interface="action-sheet" placeholder="Selecionar Modelo" [value]="documentModels[0].value">
-                <ion-select-option *ngFor="let model of documentModels" [value]="model.value">{{model.title}}</ion-select-option>
-              </ion-select>
-            </ion-col>
-          </ion-row>
-
-          <ion-row class="form-row-2 ion-margin-top">
-            <b>Dados do paciente</b>
-            <ion-col size="12">
-              <ion-row>
-                <div class="input-area">
-                  <ion-label>CPF ou Nome Completo do Paciente<span>*</span></ion-label>
-                  <ion-input type="text" placeholder="Informe CPF ou Nome do paciente" (ionInput)="null" autocomplete="off"></ion-input>
-                </div>
-              </ion-row>
-              <ion-row class="ion-justify-content-start">
-                <!-- <ion-button (click)="null" expand="block" fill="outline" shape="round">
-                  <ion-icon slot="start" name="add"></ion-icon>
-                  Novo Paciente
-                </ion-button> -->
-                <div class="ion-activatable ripple-parent ion-justify-content-center ion-align-items-center">
-                  <ion-icon slot="start" name="add"></ion-icon>
-                  Novo Paciente
-                  <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
-                </div>
-              </ion-row>
-            </ion-col>
-          </ion-row>
-          
-          <ion-row class="form-row-3 ion-margin-top">
-            <ion-label>Descrição do Atestado:<span>*</span></ion-label>
-            <ion-item counter="true">
-              <ion-textarea [autoGrow]="true" maxlength="4000" autocomplete="off"></ion-textarea>
-            </ion-item>            
-          </ion-row>
-          
-          <ion-row class="form-row-4 ion-margin-top">
-            <b>Local de Atendimento</b>
-            <ion-col size="12">
-              <ion-row>
-                <div class="select-area">
-                  <ion-label>Nome do Local de Atendimento<span>*</span></ion-label>
-                  <ion-select interface="action-sheet" placeholder="Selecionar Modelo" [value]="documentModels[0].value">
-                    <ion-select-option *ngFor="let model of documentModels" [value]="model.value">{{model.title}}</ion-select-option>
-                  </ion-select>
-                </div>
-              </ion-row>
-              <ion-row class="ion-justify-content-start">
-                <!-- <ion-button (click)="null" expand="block" fill="outline" shape="round">
-                  <ion-icon slot="start" name="add"></ion-icon>
-                  Novo Local de Atendimento
-                </ion-button> -->
-                <div class="ion-activatable ripple-parent ion-justify-content-center ion-align-items-center">
-                  <ion-icon slot="start" name="add"></ion-icon>
-                  Novo Local de Atendimento
-                  <ion-ripple-effect class="custom-ripple"></ion-ripple-effect>
-                </div>
-              </ion-row>
-            </ion-col>
-          </ion-row>
-
-        </ion-grid>
+        <div class="form-options ion-margin-top">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-button (click)="null" expand="block" shape="round">
+                  Salvar e Assinar
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button (click)="null" expand="block" shape="round">
+                  Visualizar
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button (click)="null" expand="block" fill="outline" shape="round">
+                  Cancelar
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button (click)="null" expand="block" shape="round">
+                  Salvar
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
 
       </form>
     </div>
