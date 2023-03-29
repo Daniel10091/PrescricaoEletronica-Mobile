@@ -7,10 +7,6 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage
-  },
-  {
-    path: 'novo-documento-medico',
-    loadChildren: () => import('./new-medical-document/new-medical-document.module').then( m => m.NewMedicalDocumentPageModule)
   }
 ];
 

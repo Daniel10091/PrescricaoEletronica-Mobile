@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { CheckboxCustomEvent } from '@ionic/angular';
 
 @Component({
-  selector: 'app-my-medical-documents',
-  templateUrl: './my-medical-documents.component.html',
-  styleUrls: ['./my-medical-documents.component.scss'],
+  selector: 'app-new-medical-documents',
+  templateUrl: './new-medical-documents.component.html',
+  styleUrls: ['./new-medical-documents.component.scss'],
 })
-export class MyMedicalDocumentsComponent  implements OnInit {
+export class NewMedicalDocumentsComponent  implements OnInit {
 
   public signingInfoVisible: boolean = false;
   public signingInfoIsVisible: string = "";

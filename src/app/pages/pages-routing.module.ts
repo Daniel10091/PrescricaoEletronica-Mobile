@@ -33,10 +33,6 @@ const routes: Routes = [
     loadChildren: () => import('./exit/exit.module').then( m => m.ExitPageModule)
   },
   {
-    path: 'novo-documento-medico',
-    loadChildren: () => import('./home/new-medical-document/new-medical-document.module').then( m => m.NewMedicalDocumentPageModule)
-  },
-  {
     path: 'atestado-medico',
     loadChildren: () => import('./medical-documents/medical-certificate/medical-certificate.module').then( m => m.MedicalCertificatePageModule)
   },
