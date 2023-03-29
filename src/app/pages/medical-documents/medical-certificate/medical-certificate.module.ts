@@ -15,6 +15,6 @@ import { MedicalCertificatePage } from './medical-certificate.page';
     IonicModule,
     MedicalCertificatePageRoutingModule
   ],
-  declarations: [MedicalCertificatePage]
+  // declarations: [MedicalCertificatePage]
 })
 export class MedicalCertificatePageModule {}

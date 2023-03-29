@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
@@ -15,6 +15,6 @@ import { MyMedicalDocumentsPage } from './my-medical-documents.page';
     IonicModule,
     MyMedicalDocumentsPageRoutingModule
   ],
-  declarations: [MyMedicalDocumentsPage]
+  // declarations: [MyMedicalDocumentsPage]
 })
 export class MyMedicalDocumentsPageModule {}

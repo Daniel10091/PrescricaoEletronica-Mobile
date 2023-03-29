@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-services-locations',
@@ -8,12 +7,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ServicesLocationsPage implements OnInit {
 
-  public page!: string;
-
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit() {
-    this.page = this.activatedRoute.snapshot.paramMap.get('id') as string;
+    if (localStorage.getItem('reload') === 'true') {
+      document.location.reload();
+      localStorage.setItem('reload', 'false');
+    }
   }
 
 }

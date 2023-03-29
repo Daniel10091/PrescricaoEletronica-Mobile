@@ -15,6 +15,6 @@ import { SpecialControlPage } from './special-control.page';
     IonicModule,
     SpecialControlPageRoutingModule
   ],
-  declarations: [SpecialControlPage]
+  // declarations: [SpecialControlPage]
 })
 export class SpecialControlPageModule {}

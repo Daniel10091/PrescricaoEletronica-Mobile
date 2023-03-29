@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { InputCustomEvent, IonInput, SelectCustomEvent } from '@ionic/angular';
+import { IonInput, SelectCustomEvent } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',

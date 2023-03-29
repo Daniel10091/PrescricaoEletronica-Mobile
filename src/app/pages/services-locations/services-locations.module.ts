@@ -15,6 +15,6 @@ import { ServicesLocationsPage } from './services-locations.page';
     IonicModule,
     ServicesLocationsPageRoutingModule
   ],
-  declarations: [ServicesLocationsPage]
+  // declarations: [ServicesLocationsPage]
 })
 export class ServicesLocationsPageModule {}

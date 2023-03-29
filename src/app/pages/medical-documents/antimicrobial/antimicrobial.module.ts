@@ -15,6 +15,6 @@ import { AntimicrobialPage } from './antimicrobial.page';
     IonicModule,
     AntimicrobialPageRoutingModule
   ],
-  declarations: [AntimicrobialPage]
+  // declarations: [AntimicrobialPage]
 })
 export class AntimicrobialPageModule {}

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-patients',
@@ -8,12 +7,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PatientsPage implements OnInit {
 
-  public page!: string;
-
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit() {
-    this.page = this.activatedRoute.snapshot.paramMap.get('id') as string;
+    if (localStorage.getItem('reload') === 'true') {
+      document.location.reload();
+      localStorage.setItem('reload', 'false');
+    }
   }
 
 }

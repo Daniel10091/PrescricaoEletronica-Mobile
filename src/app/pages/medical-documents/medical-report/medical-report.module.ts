@@ -15,6 +15,6 @@ import { MedicalReportPage } from './medical-report.page';
     IonicModule,
     MedicalReportPageRoutingModule
   ],
-  declarations: [MedicalReportPage]
+  // declarations: [MedicalReportPage]
 })
 export class MedicalReportPageModule {}

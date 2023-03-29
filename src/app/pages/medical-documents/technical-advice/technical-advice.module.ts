@@ -15,6 +15,6 @@ import { TechnicalAdvicePage } from './technical-advice.page';
     IonicModule,
     TechnicalAdvicePageRoutingModule
   ],
-  declarations: [TechnicalAdvicePage]
+  // declarations: [TechnicalAdvicePage]
 })
 export class TechnicalAdvicePageModule {}

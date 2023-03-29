@@ -15,6 +15,6 @@ import { SimpleRecipePage } from './simple-recipe.page';
     IonicModule,
     SimpleRecipePageRoutingModule
   ],
-  declarations: [SimpleRecipePage]
+  // declarations: [SimpleRecipePage]
 })
 export class SimpleRecipePageModule {}

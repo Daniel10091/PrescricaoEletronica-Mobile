@@ -15,6 +15,6 @@ import { ExitPage } from './exit.page';
     IonicModule,
     ExitPageRoutingModule
   ],
-  declarations: [ExitPage]
+  // declarations: [ExitPage]
 })
 export class ExitPageModule {}

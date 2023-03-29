@@ -15,6 +15,6 @@ import { ExamRequestPage } from './exam-request.page';
     IonicModule,
     ExamRequestPageRoutingModule
   ],
-  declarations: [ExamRequestPage]
+  // declarations: [ExamRequestPage]
 })
 export class ExamRequestPageModule {}

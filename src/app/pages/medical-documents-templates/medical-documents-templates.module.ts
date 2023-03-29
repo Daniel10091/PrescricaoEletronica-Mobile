@@ -15,6 +15,6 @@ import { MedicalDocumentsTemplatesPage } from './medical-documents-templates.pag
     IonicModule,
     MedicalDocumentsTemplatesPageRoutingModule
   ],
-  declarations: [MedicalDocumentsTemplatesPage]
+  // declarations: [MedicalDocumentsTemplatesPage]
 })
 export class MedicalDocumentsTemplatesPageModule {}

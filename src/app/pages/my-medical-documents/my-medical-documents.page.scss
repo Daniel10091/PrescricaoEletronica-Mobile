@@ -2,27 +2,71 @@ ion-menu-button {
   color: var(--ion-color-primary);
 }
 
+.page-title {
+  font-size: 1.8rem;
+  color: #454747;
+}
+
 #container {
-  text-align: center;
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+#container > span {
+  font-size: 0.9rem;
+  color: #454747;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+#container > ion-grid {
+  padding: 0;
+  ion-col {
+    padding: 0;
+  }
+  // .ripple-parent {
+  //   position: relative;
+  //   width: 100%;
+  //   height: 42px;
+  //   display: flex;
+  //   gap: 6px;
+  //   margin-top: 10px;
+  //   user-select: none;
+  //   font-size: 0.95rem;
+  //   color: var(--ion-color-primary);
+  //   border: 1px solid #e0dfdf;
+  //   border-radius: 50px;
+  //   overflow: hidden;
+  //   cursor: pointer;
+  //   .custom-ripple {
+  //     color: #078860;
+  //   }
+  // }
+  ion-button {
+    font-size: 1rem;
+    &.md {
+      text-transform: none;
+    }
+  }
+  .input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    ion-label {
+      color: #454747;
+      span {
+        color: #ff1f1f;
+      }
+    }
+    ion-select, ion-input {
+      width: 100%;
+      height: 40px;
+      padding-inline: 20px !important;
+      font-size: 1rem;
+      color: #454747;
+      border: 1px solid #e0dfdf;
+      border-radius: 6px;
+    }
+  }
 }

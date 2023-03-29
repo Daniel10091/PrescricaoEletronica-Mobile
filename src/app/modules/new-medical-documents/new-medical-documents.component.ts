@@ -22,7 +22,7 @@ export class NewMedicalDocumentsComponent  implements OnInit {
 
   public enableDocumentCreation: boolean = true;
 
-  public documentsTypes: any[] = [
+  public documentTypes: any[] = [
     { id: 1, value: 'atestado-medico', title: 'Atestado Médico' },
     { id: 2, value: 'receita-simples', title: 'Receita Simples' },
     { id: 3, value: 'solicitacao-de-exame', title: 'Solicitação de Exame' },

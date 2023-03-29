@@ -6,7 +6,6 @@ ion-modal #modal-content {
   ion-col {
     padding-inline: 0;
     ion-row {
-      margin-top: 16px;
       .input {
         width: 100%;
         display: flex;
@@ -25,6 +24,7 @@ ion-modal #modal-content {
           height: 40px;
           padding-inline: 20px !important;
           font-size: 1rem;
+          color: #454747;
           border: 1px solid #e0dfdf;
           border-radius: 50px;
         }

@@ -17,7 +17,12 @@ export class HomePage implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): any { }
+  ngOnInit(): any {
+    if (localStorage.getItem('reload') === 'true') {
+      document.location.reload();
+      localStorage.setItem('reload', 'false');
+    }
+  }
 
   public showSigningInfo(): any {
     this.signingInfoIsVisible != "is-visible" ? this.signingInfoIsVisible = "is-visible" : this.signingInfoIsVisible = "";
