@@ -34,9 +34,9 @@ export class NewMedicalDocumentsComponent  implements OnInit {
   ];
 
   public servicesLocations: any[] = [
-    { id: 1, value: '1', title: ' Local 1' },
-    { id: 2, value: '2', title: ' Local 2' },
-    { id: 3, value: '3', title: ' Local 2' },
+    { id: 1, value: '1', title: 'Local 1' },
+    { id: 2, value: '2', title: 'Local 2' },
+    { id: 3, value: '3', title: 'Local 3' },
   ];
 
   public documentModels: any[] = [

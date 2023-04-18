@@ -83,8 +83,8 @@
                   <ion-row>
                     <div class="field-area">
                       <ion-label>Nome do Local de Atendimento<span>*</span></ion-label>
-                      <ion-select interface="action-sheet" placeholder="Selecionar Modelo" [value]="documentModels[0].value">
-                        <ion-select-option *ngFor="let model of documentModels" [value]="model.value">{{model.title}}</ion-select-option>
+                      <ion-select interface="action-sheet" placeholder="Selecionar Modelo" [value]="newDocument.serviceLocation" (ionChange)="onServiceLocationChanged($event)">
+                        <ion-select-option *ngFor="let model of servicesLocations" [value]="model.value">{{model.title}}</ion-select-option>
                       </ion-select>
                     </div>
                   </ion-row>
